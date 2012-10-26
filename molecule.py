@@ -15,7 +15,7 @@ options:
 -v             verbose"""
 
 import sys,math,getopt
-import atomic_data, dalton_file_handling
+import atomic_data, read_molinp
 from conversion import au2ang
 
 # process list of arguments
@@ -138,7 +138,7 @@ def cavity_radius(rcm,atomlist):
         print 'cavity radius=',cavrad,'a.u.'
     return cavrad
 
-atomlist, symgenlist = dalton_file_handling.get_atoms(filename)
+atomlist, symgenlist = read_molinp.get_atoms(filename)
 addsym_atoms(atomlist,symgenlist)
 
 natoms=len(atomlist)
