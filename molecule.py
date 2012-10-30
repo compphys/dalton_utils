@@ -15,8 +15,9 @@ options:
 -v             verbose"""
 
 import sys,math,getopt
-import atomic_data, read_molinp
-from conversion import au2ang
+from utils import atomic_data
+import read_molinp
+from utils.conversion import au2ang
 
 # process list of arguments
 outfile = ''
