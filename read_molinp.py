@@ -3,8 +3,8 @@
 def get_atoms(filename,verbose=False):
     
     import sys
-    import atomic_data
-    from conversion import au2ang
+    from utils import atomic_data
+    from utils.conversion import au2ang
 
     try:
         dalinp=open(filename,'r')
