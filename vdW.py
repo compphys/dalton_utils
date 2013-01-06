@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sys,utils
-import gauss_legendre
+import utils.gauss_legendre 
 
 # polarizabilities alpha(iw) for A and B
 A=[]
@@ -29,11 +29,11 @@ A=l[1:n+1]; B=l[n+2:2*n+3];
 print "alpha(0;0): A=", l[0], "  B=", l[n+1]
 
 if n==8:
-    gauss_legendre.gauss_legendre_8pt(A,B)
+    utils.gauss_legendre.gauss_legendre_8pt(A,B)
 elif n==10:
-    gauss_legendre.gauss_legendre_10pt(A,B)
+    utils.gauss_legendre.gauss_legendre_10pt(A,B)
 elif n==12:
-    gauss_legendre.gauss_legendre_12pt(A,B)
+    utils.gauss_legendre.gauss_legendre_12pt(A,B)
 else:
     print "vdW.py: incorrect number of alpha values"
     print "alpha=",A
