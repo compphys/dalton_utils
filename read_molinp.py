@@ -42,7 +42,7 @@ def get_atoms(filename,verbose=False):
         if line.find('Atoms')>-1:
             ntypes_count+=1
             pos=line.find('Atoms')+len('Atoms')+1
-            natoms=int(line[pos:pos+2])
+            natoms=int(line[pos:].split()[0])
             pos=line.find('Charge')+len('Charge')+1
             charge=float(line[pos:pos+4])
             label=''
