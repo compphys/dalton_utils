@@ -18,7 +18,7 @@ Usage: < -i {in.xyz} input> <-o {out.mol} > <-b basis set {6-31G*} > <-f file ty
 for PDB format many different atom types may be possible. consider setting the '-p2' flag to only use the first character. \
 This will make it impossible to use any atoms with more than 1 character symbols. Consider reformatting pdb if this is an issue.\r\n";
 string COMMENT1="TITLE";
-string mod_date="5-29-2013";
+string mod_date="7-29-2013";
 bool p2_flag=false;
 
 struct ATOM_INF {
@@ -32,7 +32,7 @@ struct ATOM_INF {
 
 int main (int argc, char *argv[])
 {	 
-cout << "Program 2gauss written by Cody Covington. Last Modified "<<mod_date<<". use -h for help. "<<endl;
+cout << "Program crd2dalton written by Cody Covington. Last Modified "<<mod_date<<". use -h for help. "<<endl;
 if (argc < 2)
     {// If the user didn't provide a filename command line argument, print an error and exit.
         cout << "Usage: " << argv[0] << " < -i {in.xyz} input> <-o {out.mol} > <-d file to insert{gaussin.dat}> <-f file type(xyz,mol,gro,pdb)> <-n max read> " << endl<<" <-k checkpoint name> <-c title/comment line> <-h print help and quit> <-p2>"<<endl;
