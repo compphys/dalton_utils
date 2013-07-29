@@ -247,7 +247,7 @@ return 0;
 
 double StoF(string CONV){
 
-  float val ;
+  double val ;
   stringstream ss (stringstream::in | stringstream::out);
   ss << CONV;
   ss >> val ;
